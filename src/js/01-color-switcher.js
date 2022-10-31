@@ -12,7 +12,7 @@ refs.btnStop.addEventListener('click', onBtnStopClick);
 
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  }
+}
 
 function onBtnStartClick(){
     refs.btnStart.classList.add('disabled', true);
