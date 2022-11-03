@@ -2,7 +2,7 @@ const DELAY = 1000;
 const body = document.body;
 let interval = null;
 
-refs = {
+const refs = {
     btnStart: document.querySelector('[data-start]'),
     btnStop: document.querySelector('[data-stop]'),
 }
