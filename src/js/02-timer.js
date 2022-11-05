@@ -7,6 +7,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 // === Підключення бібліотеки Notiflix ===
 import Notiflix from 'notiflix';
+//import { defaults } from 'flatpickr/dist/types/options';
 
 //==============================================
 
@@ -39,22 +40,19 @@ class Timer {
       const currentTime = Date.now();
       const deltaTime = startTime - currentTime;
       const time = convertMs(deltaTime);
+
+      console.log(deltaTime);
+
+      if(deltaTime < 0){
+        return;
+      }
+
       //const { days, hours, minutes, seconds } = convertMs(deltaTime);
       //console.log('start -> currentTime', currentTime);
 
       //upDateClockFace(time);
 
       this.onTick(time);
-
-      stopTimer();
-
-      function stopTimer(){
-        if (
-        calendar.selectedDates[0].getTime() / 1000 ===
-        parseInt(Date.now() / 1000)
-        ) { return;
-        }
-        }
 
       //console.log(`${days}:${hours}:${minutes}:${seconds}`);
 
