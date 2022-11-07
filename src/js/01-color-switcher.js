@@ -32,5 +32,8 @@ function onBtnStopClick() {
   refs.btnStart.classList.remove('disabled');
   refs.btnStop.classList.add('disabled', true);
   //console.log('Клік по кнопці Stop');
+
+  refs.btnStart.disabled = false;
+
   clearInterval(interval);
 }
